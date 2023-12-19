@@ -1,6 +1,3 @@
-import wordtodigits
-
-
 def add_first_and_last_number(numbers):
     """
     Receive string of numbers and letters and return a combination the first digit and the last digit (in that order) to form a single two-digit number.
@@ -29,8 +26,8 @@ def add_first_and_last_number(numbers):
         "8": 8,
         "9": 9
     }
-    # replace occurances of words with digits
     digits_to_insert = {}
+    # loop through all words and digits and insert the digit in the correct index
     for word, digit in number_word_to_digit_dict.items():
         if (idx := numbers.find(word)) >= 0:
             digits_to_insert[idx] = str(digit)
